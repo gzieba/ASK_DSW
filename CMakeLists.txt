@@ -17,4 +17,14 @@ file(GLOB_RECURSE OBSERVER_HEADERS "observer/*.h")
 file(GLOB_RECURSE OBSERVER_SOURCES "observer/*.cpp")
 
 add_executable(Observer ${OBSERVER_HEADERS} ${OBSERVER_SOURCES})
+
+project(Singleton)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+file(GLOB_RECURSE SINGLETON_HEADERS "singleton/*.h")
+file(GLOB_RECURSE SINGLETON_SOURCES "singleton/*.cpp")
+
+add_executable(Singleton ${SINGLETON_HEADERS} ${SINGLETON_SOURCES})
+
 target_link_libraries(Observer pthread)
