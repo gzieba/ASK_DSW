@@ -45,4 +45,13 @@ file(GLOB_RECURSE ADAPTER_SOURCES "adapter/*.cpp")
 
 add_executable(Adapter ${ADAPTER_HEADERS} ${ADAPTER_SOURCES})
 
+project(Memento)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+file(GLOB_RECURSE MEMENTO_HEADERS "memento/*.h")
+file(GLOB_RECURSE MEMENTO_SOURCES "memento/*.cpp")
+
+add_executable(Memento ${MEMENTO_HEADERS} ${MEMENTO_SOURCES})
+
 target_link_libraries(Observer pthread)
